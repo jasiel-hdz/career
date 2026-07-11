@@ -1,67 +1,120 @@
-# Career Knowledge Base
+# Career Engineering Repository
 
-Segundo cerebro profesional + **entregables de carrera por sprint**.
+Single source of truth for an engineering career.
 
-El repo crece años. **El CV V1 lo necesitas esta semana.**
+This repository is the **input**. Resumes, LinkedIn, cover letters, interview prep, and portfolio material are **outputs** generated from it.
 
-> Ver [SPRINTS.md](./SPRINTS.md) — plan activo y definition of done.
+---
 
-## Sprint 1 (ahora)
+## What problem this solves
 
-**Objetivo:** CV V1 — no terminar el repositorio.
+Career documents are usually rewritten from memory under time pressure. Details drift, impact gets invented or forgotten, and the same work gets described inconsistently across formats.
 
-| Tarea | Estado |
-|-------|--------|
-| Career repo + reglas + templates | ✅ |
-| SESAJ README | ⬜ |
-| Bóveda | ⬜ |
-| Centinela | ⬜ |
-| [CV V1](./03-resume/cv-v1.md) | ⬜ |
+This repository preserves engineering knowledge once—business context, decisions, tradeoffs, contributions, and lessons—so future materials never need to be reconstructed from scratch.
 
-**Regla:** No reorganizar carpetas. Una sesión = un entregable.
+---
 
-## Repository Status — FROZEN
+## What this is (and is not)
 
-**Estructura congelada.** No agregar carpetas salvo que un proyecto futuro lo exija.
+**Is:** documentation of engineering work—problems, solutions, architecture, challenges, and ownership.
 
-**Prioridad actual: producir contenido. No estructura.**
+**Is not:** a resume dump, a tech laundry list, or a task tracker.
 
-## Filosofía
+Each project document should let a future reader remember the work without relying on memory.
 
-- **Knowledge engineering** — documentar decisiones, no listas de tecnologías.
-- Documentar el **WHY**, no solo el WHAT.
-- Nunca inventar responsabilidades, métricas ni impacto.
-- **Anti analysis paralysis:** estructura lista; ahora contenido mínimo → CV.
+---
 
-## Estructura
+## Organization
 
 ```
 career/
-├── SPRINTS.md                   # Plan por sprints ← leer primero
-├── AGENTS.md
-├── PROJECT_TEMPLATE.md
-├── 03-resume/cv-v1.md           # Entregable Sprint 1
-├── 01-experience/sesaj/         # Fuente de verdad SESAJ
-├── 08-decisions/                # ADRs — prioridad sobre 02-knowledge
-├── 09-feedback/                 # Qué preguntaron Amazon, Google, recruiters
-├── 10-job-applications/         # Por empresa: cover letter, notes, interview
-├── 11-goals/                    # 2026, 2027
-├── 02-knowledge/                # Sprint 3+ — solo lo usado en la práctica
-├── 03-achievements/
-├── 04-system-design/
-├── 05-career-growth.md
-├── 06-projects/
-└── 07-interview-stories/
+├── README.md              # This file — purpose and navigation
+├── PROFILE.md             # Professional profile (high-level)
+├── experience/            # Companies and projects
+│   ├── sesaj/
+│   ├── stratech/
+│   ├── ofnos/
+│   ├── sonetasot-cms/
+│   └── sonetasot-gis/
+└── resumes/               # Generated / targeting artifacts
+    ├── software-engineer.md
+    ├── backend-python.md
+    └── ai-engineer.md
 ```
 
-## Sprints futuros
+| Path | Role |
+|------|------|
+| `PROFILE.md` | Concise professional profile used as a base for outputs |
+| `experience/<company>/` | One company folder; `README.md` for company context |
+| `experience/<company>/*.md` | One file per major project |
+| `resumes/` | Resume variants derived from experience docs |
 
-| Sprint | Foco |
-|--------|------|
-| 2 | STRATECH, OFNOS, SONETASOT GIS, SONETASOT CMS |
-| 3 | LinkedIn, Portfolio, Interview Stories |
-| 4 | Amazon / AI / Backend resume variants |
+### Project file sections
 
-## Reglas para Cursor
+Each project file uses a fixed shape:
 
-Ver [AGENTS.md](./AGENTS.md).
+1. Business Context  
+2. Product Overview  
+3. My Contributions  
+4. Engineering Decisions  
+5. Technical Challenges  
+6. Technologies  
+7. Resume Bullets  
+8. STAR Story  
+
+Keep project docs concise (roughly 100–150 lines). Prefer depth over coverage of every task.
+
+---
+
+## How this repository is maintained
+
+| Role | Responsibility |
+|------|----------------|
+| **Author (ChatGPT)** | Writes technical and professional content. Source of truth for facts. |
+| **Editor (Cursor)** | Creates files, formats Markdown, keeps structure consistent, updates indexes, flags duplication and link opportunities. Does not invent facts or change technical meaning without approval. |
+| **Reviewer (you)** | Validates that content matches real experience. |
+
+### Editor rules
+
+- Integrate new documents into the existing structure.
+- Update this README and company indexes when paths or docs change.
+- Propose improvements; do not silently rewrite technical content.
+- Ask clarifying questions only when a section is marked `[TODO]` or `[NEEDS CLARIFICATION]`.
+- Do not add folders or templates unless explicitly requested.
+- Keep the repository simple.
+
+### Content rules
+
+- Document engineering work, not job descriptions.
+- Prefer ownership verbs (Designed, Architected, Implemented, Led…) and always explain **why**.
+- Never invent facts, exaggerate impact, or add responsibilities that were not performed.
+
+---
+
+## Outputs
+
+Artifacts under `resumes/` (and later LinkedIn, cover letters, interview notes, portfolio) should be **derived** from `PROFILE.md` and `experience/`.
+
+If a claim cannot be traced to an experience document, it does not belong in an output.
+
+---
+
+## Index
+
+### Profile
+
+- [PROFILE.md](PROFILE.md)
+
+### Experience
+
+- [Sesaj](experience/sesaj/README.md) — [Bóveda](experience/sesaj/boveda.md), [Centinela](experience/sesaj/centinela.md)
+- [Stratech](experience/stratech/README.md) — [BBVA](experience/stratech/bbva.md), [Farmacias](experience/stratech/farmacias.md), [iFit](experience/stratech/ifit.md)
+- [Ofnos](experience/ofnos/README.md)
+- [Sonetasot CMS](experience/sonetasot-cms/README.md)
+- [Sonetasot GIS](experience/sonetasot-gis/README.md)
+
+### Resumes
+
+- [Software Engineer](resumes/software-engineer.md)
+- [Backend Python](resumes/backend-python.md)
+- [AI Engineer](resumes/ai-engineer.md)
