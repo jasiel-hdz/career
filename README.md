@@ -36,10 +36,11 @@ career/
 │   ├── ofnos/
 │   ├── sonetasot-cms/
 │   └── sonetasot-gis/
-└── resumes/               # Generated / targeting artifacts
-    ├── software-engineer.md
-    ├── backend-python.md
-    └── ai-engineer.md
+└── resume/                # Generated / targeting artifacts
+    ├── master-resume.md
+    ├── backend.md
+    ├── fullstack.md
+    └── architect.md
 ```
 
 | Path | Role |
@@ -47,20 +48,23 @@ career/
 | `PROFILE.md` | Concise professional profile used as a base for outputs |
 | `experience/<company>/` | One company folder; `README.md` for company context |
 | `experience/<company>/*.md` | One file per major project |
-| `resumes/` | Resume variants derived from experience docs |
+| `resume/` | Resume variants derived from experience docs |
 
 ### Project file sections
 
 Each project file uses a fixed shape:
 
-1. Business Context  
-2. Product Overview  
-3. My Contributions  
-4. Engineering Decisions  
-5. Technical Challenges  
-6. Technologies  
-7. Resume Bullets  
-8. STAR Story  
+1. Overview  
+2. Business Context  
+3. Product Overview  
+4. Architecture  
+5. My Contributions  
+6. Engineering Decisions  
+7. Technical Challenges  
+8. Infrastructure  
+9. Technologies  
+10. Impact  
+11. Lessons Learned  
 
 Keep project docs concise (roughly 100–150 lines). Prefer depth over coverage of every task.
 
@@ -93,7 +97,7 @@ Keep project docs concise (roughly 100–150 lines). Prefer depth over coverage 
 
 ## Outputs
 
-Artifacts under `resumes/` (and later LinkedIn, cover letters, interview notes, portfolio) should be **derived** from `PROFILE.md` and `experience/`.
+Artifacts under `resume/` (and later LinkedIn, cover letters, interview notes, portfolio) should be **derived** from `PROFILE.md` and `experience/`.
 
 If a claim cannot be traced to an experience document, it does not belong in an output.
 
@@ -107,14 +111,15 @@ If a claim cannot be traced to an experience document, it does not belong in an 
 
 ### Experience
 
-- [Sesaj](experience/sesaj/README.md) — [Bóveda](experience/sesaj/boveda.md), [Centinela](experience/sesaj/centinela.md)
+- [Sesaj](experience/sesaj/README.md) — [Bóveda](experience/sesaj/boveda.md), [Centinela](experience/sesaj/centinela.md), [Architecture](experience/sesaj/architecture.md)
 - [Stratech](experience/stratech/README.md) — [BBVA](experience/stratech/bbva.md), [Farmacias](experience/stratech/farmacias.md), [iFit](experience/stratech/ifit.md)
-- [Ofnos](experience/ofnos/README.md)
-- [Sonetasot CMS](experience/sonetasot-cms/README.md)
-- [Sonetasot GIS](experience/sonetasot-gis/README.md)
+- [Ofnos](experience/ofnos/README.md) — [Platform](experience/ofnos/platform.md), [Architecture](experience/ofnos/architecture.md)
+- [Sonetasot CMS](experience/sonetasot-cms/README.md) — [CMS Platform](experience/sonetasot-cms/cms-platform.md)
+- [Sonetasot GIS](experience/sonetasot-gis/README.md) — [GIS Platform](experience/sonetasot-gis/gis-platform.md)
 
 ### Resumes
 
-- [Software Engineer](resumes/software-engineer.md)
-- [Backend Python](resumes/backend-python.md)
-- [AI Engineer](resumes/ai-engineer.md)
+- [Master Resume](resume/master-resume.md)
+- [Backend](resume/backend.md)
+- [Full Stack](resume/fullstack.md)
+- [Architect](resume/architect.md)
